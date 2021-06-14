@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/HiReact/static/css/main.b801a29a.chunk.css",
+    "main.js": "/HiReact/static/js/main.a5cf61e9.chunk.js",
+    "main.js.map": "/HiReact/static/js/main.a5cf61e9.chunk.js.map",
+    "runtime-main.js": "/HiReact/static/js/runtime-main.4a4472c2.js",
+    "runtime-main.js.map": "/HiReact/static/js/runtime-main.4a4472c2.js.map",
+    "static/js/2.18b7c2ce.chunk.js": "/HiReact/static/js/2.18b7c2ce.chunk.js",
+    "static/js/2.18b7c2ce.chunk.js.map": "/HiReact/static/js/2.18b7c2ce.chunk.js.map",
+    "index.html": "/HiReact/index.html",
+    "static/css/main.b801a29a.chunk.css.map": "/HiReact/static/css/main.b801a29a.chunk.css.map",
+    "static/js/2.18b7c2ce.chunk.js.LICENSE.txt": "/HiReact/static/js/2.18b7c2ce.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a4472c2.js",
+    "static/js/2.18b7c2ce.chunk.js",
+    "static/css/main.b801a29a.chunk.css",
+    "static/js/main.a5cf61e9.chunk.js"
+  ]
+}
