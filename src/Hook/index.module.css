@@ -1,0 +1,22 @@
+.header {
+  position: relative;
+  padding-left: 50px;
+}
+.header ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.header ul li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.header .line {
+  position: absolute;
+  bottom: 0;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #c7000b;
+}

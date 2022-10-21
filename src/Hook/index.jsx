@@ -1,51 +1,37 @@
-import React, { useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
+import React, { Component } from 'react'
+import style from './index.module.css'
+export default class App extends Component {
 
-class App extends React.Component {
-  render() {
-    return <Example />;
+  state = { width: 0, left: 0}
+
+  enter = (event) => {
+    const {clientWidth, offsetLeft } = event.target;
+    console.log('clientWidth', clientWidth);
+    this.setState({ 
+      width: 30,
+      left: (clientWidth - 30) / 2 + offsetLeft,
+    })
   }
-}
 
-function Toolbar(props) {
-  // Toolbar 组件接受一个额外的“theme”属性，然后传递给 ThemedButton 组件。
-  // 如果应用中每一个单独的按钮都需要知道 theme 的值，这会是件很麻烦的事，
-  // 因为必须将这个值层层传递所有组件。
-  return (
-    <div>
-      <ThemedButton theme={props.theme} />
-    </div>
-  );
-}
-
-function Example() {
-  const [count, setCount] = useState(0);
-  // 相当于 componentDidMount 和 componentDidUpdate:
-  useEffect(() => {
-    // 使用浏览器的API更新页面标题
-    document.title = `You clicked ${count} times`;
-  });
-
-  return (
-    <div>
-      <p>You clicked {count} times.</p>
-      <button onClick={() => setCount(count + 1)}>
-        Clicked Me
-      </button>
-    </div>
-  )
-}
-
-class ThemedButton extends React.Component {
-  render() {
+  leave = () => {
+    this.setState(() =>({ width: 0 }) )
+  }
+  render () {
+    const { width, left } = this.state;
+    console.log('style:', style);
     return (
-      <div>
-        <Button variant="text">Text</Button>
-        <Button variant="contained">Contained</Button>
-        <Button variant="outlined">Outlined</Button>
-      </div>
-    );
+      <>
+        <div className={ style.header }>
+          <ul ref="ul" onMouseLeave={ this.leave } >
+            <li onMouseEnter={ this.enter }>首页</li>
+            <li onMouseEnter={ this.enter }>导航一</li>
+            <li onMouseEnter={ this.enter }>导航二</li>
+            <li onMouseEnter={ this.enter }>导航三</li>
+            <li onMouseEnter={ this.enter }>导航四</li>
+          </ul>
+          <div className={style.line} style={{width: width, top: '60px',left: left, height: '10px'}}></div>
+        </div>
+      </>
+    )
   }
 }
-
-export default App;

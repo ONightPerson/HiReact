@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+header {
+  height: 150px;
+}
+.nav_list {
+  height: 50px;
+  width: 100%;
+  background-color: #eee;
+}
+.activeNav {
+  width: 150px;
+  height: 49px;
+  float: left;
+  list-style: none;
+  text-align: center;
+  line-height: 50px;
+  transition: background 1s;
+}
+.active {
+  border-top: 1px solid green;
+  background-color: #4179f7;
+  color: #fff;
+}
+.type_group {
+  
+}
+.type_title {
+  width: 100px;
+  height: 300px;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+}
+section {
+  width: 100%;
+}
+section:nth-child(1) {
+  height: 600px;
+  background-color: red;
+}
+section:nth-child(2) {
+  height: 700px;
+  background-color: green;
+}
+section:nth-child(3) {
+  height: 700px;
+  background-color: blue;
+}
